@@ -1,0 +1,115 @@
+@charset "UTF-8";
+/* 4단계 reset, common */
+*{margin: 0; padding: 0;}
+body{background: #76b852; font-family: sans-serif;}
+
+/* 5단계 로그인, 로그아웃 */
+.center{  /*7단계. 센터로 보내는 공식*/
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  min-width: 350px;  /*최소 넓이 350. 깨지지않고..*/
+}
+#btn-login, #btn-logout{ /*8단계. 버튼*/
+  width: 100px; height: 40px;
+  border: 1px solid #fff;
+  font-size: 1.2em;
+  background: none;
+  color: #fff;
+}
+.user-info{ /*9단계 처음에는 logout,정보가 안보여야되므로..숨김처리할것*/
+  display: none;
+}
+.user-info b{ /*10단계*/
+  color: #fff;
+  padding-right: 5px;
+}
+
+/* 6단계 로그인폼 */
+.login-form{ /*11단계*/
+  display: none; /*24단계처음에는 안보여야하므로*/
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 360px;
+}
+.login-form h1{ /*12단계 글자효과주기*/
+  text-align: center;
+  color: #f1ebe5;
+  font-size: 3em;
+  letter-spacing: 4px; /*글자간격*/
+  padding-bottom: 20px;
+  text-shadow: 0 5px 8px rgba(0,0,0,0.2), 0 -2px 1px #fff;
+}
+form{ /*13단계 박스만들기*/
+  background: #fff;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2),0 5px 5px rgba(0,0,0,0.2)
+}
+form label{ /*14단계 */
+  position: absolute;
+  font-size: 0; /*검정색 아이디 비밀번호 글자 사라짐*/
+}
+form label::before{ /*대충  css 마무리하고 21단계*/
+  display: inline-block;
+  width: 46px;
+  height: 46px;
+  line-height: 46px;
+  font-family: FontAwesome;
+  font-size: 25px;  /*사이즈를 기입해야 아이콘이 나옴*/
+}
+/* focus가 발생했을 때 아이콘 색상 변경 */
+form label.change::before{ /*23단계 focus가 발생되었을 때 아이콘 색상 변경*/
+  color: #fff;
+}
+form label[for=id]::before{ /*22단계*/
+  content:"\f007"  /*fontawesome 아이콘 숫자 f12통해서*/
+}
+form label[for=password]::before{
+  content:"\f023"
+}
+form input{ /*15단계 아이디 비밀번호 효과*/
+  background: #f2f2f2;
+  width: 100%;
+  height: 46px;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 0 10px 0 46px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+form input:focus{ /*16단계 플레이스홀더 색상*/
+  background: #000;
+  color: #fff;
+}
+form input:focus::-webkit-input-placeholder{}
+form button{ /*17단계*/
+  background: #4caf50;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  text-transform: uppercase; /*LOGIN부분을 대문자로 변경*/
+  transition: all 1s; /*색상이 1초동안 변하게함*/
+}
+form button:hover{ /*18단계 버튼을 어둡게*/
+  background: #2d7130;
+}
+form .find-info{ /*19단계*/
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+form .find-info a{ /*20단계*/
+  color: #2d7130;
+  text-decoration: none;
+}
+form .message{  /*29단계*/
+  color: #f00;
+  font-size: 12px;
+  padding-bottom: 15px;
+  }
