@@ -201,7 +201,7 @@ section{padding-top: 70px;} /*emblem의 위와 겹쳐져서 위로 여분을 더
   width: 334px; height: 334px;
 }
 /* flip 스크립트로 대체됨 */
-.reserve .reserve-store .rotate > *{
+/* .reserve .reserve-store .rotate > *{
   position: absolute; top: 50%; left: 50%;
   backface-visibility: hidden;
   transition: all 0.5s;
@@ -217,7 +217,7 @@ section{padding-top: 70px;} /*emblem의 위와 겹쳐져서 위로 여분을 더
 }
 .reserve .reserve-store .rotate:hover .back{
     transform: translate(-50%, -50%) rotateY(0deg);
-}
+} */
 .reserve .reserve-store .rotate .back a{
   position: absolute; bottom: 50px; left: 50%;
   transform: translateX(-50%);
