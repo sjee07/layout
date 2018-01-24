@@ -234,7 +234,7 @@ section{padding-top: 70px;} /*emblem의 위와 겹쳐져서 위로 여분을 더
 /* footer=============================== */
 footer{background: #282828; color: #ccc; text-align: center; padding: 20px 0; font: 0.8em;}
 footer .info{padding: 20px 0;}
-footer .info li{color:#fff;}
+footer .info li{color:#ccc;}
 #btn-banner{display: none;}
 
 
