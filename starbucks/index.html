@@ -282,4 +282,17 @@
     </footer>
     <!-- footer end-->
   </body>
+  <script src-"js/jquery.min.js"></script>
+  <script src-"js/jquery.flip.js"></script>
+  <script>
+    $('.rotate').flip({
+    axis: 'y',
+    reverse: true,
+    trigger: 'manual'
+    }).bind('mouseenter focusin',function(){
+    $(this).flip(true);
+    }).bind('mouseleave focusout', function () {
+    $(this).flip(false);
+    });
+  </script>
 </html>

@@ -146,7 +146,11 @@ section{padding-top: 70px;} /*emblem의 위와 겹쳐져서 위로 여분을 더
 /* product */
 .product{
   background: url(../images/main2.jpg) no-repeat center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
+  background-attachment:scroll;
 }
 .product .product-info{padding: 20px 0;}
 .product .product-info a{color: #fff; padding: 10px; border: 2px solid #fff; border-radius: 3px;}
@@ -174,7 +178,13 @@ section{padding-top: 70px;} /*emblem의 위와 겹쳐져서 위로 여분을 더
 .product .product-gallery ul li dl dd{text-overflow: ellipsis; overflow: hidden; white-space: nowrap;}
 
 /* reserve */
-.reserve{position: relative; background: url(../images/main3.jpg) no-repeat center fixed; background-size: cover;}
+.reserve{position: relative; background: url(../images/main3.jpg) no-repeat center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-attachment:scroll;
+  }
 .reserve h2{text-align: center; color: #fff; padding-top: 20px; font: 2em; text-shadow: 0 0 10px #fff;}
 .reserve h2 sup{font-size: 0.5em;}
 .reserve .reserve-info{padding: 20px 0;}
@@ -190,9 +200,10 @@ section{padding-top: 70px;} /*emblem의 위와 겹쳐져서 위로 여분을 더
   transform: translate(-50%, -50%); /*가운데 정렬*/
   width: 334px; height: 334px;
 }
+/* flip 스크립트로 대체됨 */
 .reserve .reserve-store .rotate > *{
   position: absolute; top: 50%; left: 50%;
-  backface-visibility: hidden; /*뒤집음*/
+  backface-visibility: hidden;
   transition: all 0.5s;
 }
 .reserve .reserve-store .rotate .front{
@@ -223,6 +234,7 @@ section{padding-top: 70px;} /*emblem의 위와 겹쳐져서 위로 여분을 더
 /* footer=============================== */
 footer{background: #282828; color: #ccc; text-align: center; padding: 20px 0; font: 0.8em;}
 footer .info{padding: 20px 0;}
+footer .info li{color:#000;}
 #btn-banner{display: none;}
 
 
