@@ -121,6 +121,7 @@ header .gnb-nav li ul li a:hover{text-decoration: none;}
 .online .online1, .online .online2, .online .online3, .online .online4{padding-bottom: 50px; padding-left: 20px;}
 .online1 p, .online2 p, .online3 p, .online4 p{color: #fff;}
 .online1 span, .online2 span, .online3 span, .online4 span{color: #ffac00; font-size: 18px;}
+.online [class*='online'] a{color: #fff;}
 
 .offline-wrap{margin-left: 20px; position: relative;}
 .info .offline{position: absolute; display: inline-block;}
