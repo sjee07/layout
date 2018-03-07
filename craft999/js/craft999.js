@@ -35,10 +35,20 @@ $('.toggle-menu').on('click', function(){
 
 
 //검색창
-$('.right-nav .wrap #btn-search-open').on('click',function(){
-  $('.search-form').toggle();
+var searchFlag=true;
+$('.right-nav .wrap #btn-search-open').on('click', function(){
+  if(searchFlag){
+    $(this).find('span').text('통합검색창닫기');
+    searchFlag=false;
+  }else{
+    $(this).find('span').text('통합검색창열기');
+    $('.search-form input').val('');
+    searchFlag=true;
+  }
   $(this).find('i').toggleClass('icon-search icon-plus');
+  $('.search-form').toggle();
 })
+
 
 //서브 네비 열기/닫기 적용 ****
 $('.right-nav #btn-menu-open').on('click',function(){
