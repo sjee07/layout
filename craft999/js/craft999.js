@@ -79,36 +79,39 @@ $('#btn-login').on('click',function(){
     e.preventDefault();
   })
 
+  selectIndex=0;
+  $('.accordion.list a').on('click', function(){
+    $('.accordion.list a').removeClass('active');
+    $(this).addClass('active');
+    selectIndex=$(this).index();
+    // console.log('선택한리스트');
+    initMap(storeInfo[selectIndex].lat, storeInfo[selectIndex].lng);
+  })
+
+
 })
 
 //매장검색======================================
-// storeInfo=[{
-//   name:'BY ET TOL(롯데백화점 월드타워점)',
-//   addr:'서울 강남1',
-//   tel:'02-123-4567',
-//   lat:37.513378,
-//   lng:127.101529,
-// },{
-//   name:'BY ET TOL(롯데백화점 강남점)',
-//   addr:'서울 강남2',
-//   tel:'02-890-1234',
-//   lat:37.496919,
-//   lng:127.053259,
-// },{
-//   name:'IT Hysan place',
-//   addr:'서울 서대문구 1',
-//   tel:'02-567-8910',
-//   lat:37.528352,
-//   lng:127.040191,
-// }];
+storeInfo=[{
+  name:'BY ET TOL(롯데백화점 월드타워점)',
+  addr:'서울 강남1',
+  tel:'02-123-4567',
+  lat:37.513378,
+  lng:127.101529,
+},{
+  name:'BY ET TOL(롯데백화점 강남점)',
+  addr:'서울 강남2',
+  tel:'02-890-1234',
+  lat:37.496919,
+  lng:127.053259,
+},{
+  name:'IT Hysan place',
+  addr:'서울 서대문구 1',
+  tel:'02-567-8910',
+  lat:37.528352,
+  lng:127.040191,
+}];
 
-selectIndex=0;
-$('.accordion a').on('click', function(){
-  $('.accordion a').removeClass('active');
-  $(this).addClass('active');
-  selectIndex=$(this).index();
-  initMap(storeInfo[selectIndex].lat, storeInfo[selectIndex].lng);
-})
 
 
 
