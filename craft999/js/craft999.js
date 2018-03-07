@@ -72,6 +72,14 @@ $('#btn-login').on('click',function(){
     $(this).find('i').toggleClass('icon-angle-double-down icon-angle-double-up');
   })
 
+//offline accordion 리스트 클릭후 리스트 닫히는거
+//a 클릭후 .list가 slideup(a의 엄마)되어야 하므로 parent(엄마)를 선택함
+  $('.accordion.list > a').click(function(e){
+    e.preventDefault();
+    $(this).parent().slideUp();
+  })
+
+
 // accordion e.preventDefault하는 방법
 //처음에 보여지고 있는 #accordion을 선택후, 보이지 않는(사실상 e.preventDefault해야하는)
 //'.accordion a'를 따로 선택후 e.preventDefault를 먹혀줘야 함.
@@ -112,6 +120,7 @@ storeInfo=[{
   lng:127.040191,
 }];
 
+storeInfo
 
 
 
@@ -135,13 +144,15 @@ function initMap(latVal, lngVal) {
   });
 
   // 정보 더보기
-  var contentString = '<div id="content">'+
-  '<h4>BY ET TOL(롯데백화점 월드타워점)</h4>'+
-  '<ul>'+
-  '<li>서울 강남</li>'+
-  '<li>Tel : 02.1234.1234</li>'+
-  '</ul>'+
-  '</div>';
+  var contentString =
+  '<dl>'
+  +'  <dt>매장주소</dt>'
+  +'  <dd>'+storeInfo[selectIndex].addr+'</dd>'
+  +'  <dt>전화번호</dt>'
+  +'  <dd>'+storeInfo[selectIndex].tel+'</dd>'
+  +'</dl>'
+;
+
 
   var infowindow = new google.maps.InfoWindow({
     content: contentString
