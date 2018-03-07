@@ -18,11 +18,11 @@ $(function(){
 });
 
 // 네비게이션 (사이즈별 적용 수정) *******
-$('.gnb-nav').on('mouseenter',function(){
+$('.gnb-nav').on('mouseenter focusin',function(){
   if($devWidth < $limitSize) return false;
   $('header').addClass('on');
   $('header .gnb-nav li ul').stop().fadeIn(500);
-}).on('mouseleave',function(){
+}).on('mouseleave focusout',function(){
   if($devWidth < $limitSize) return false;
   $('header').removeClass('on');
   $('header .gnb-nav li ul').stop().fadeOut(200);
