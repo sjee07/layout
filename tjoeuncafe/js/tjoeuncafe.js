@@ -56,11 +56,11 @@ $(function(){
   //윈도우 리사이즈 end
 
   //네비게이션
-  $('.gnb-nav').on('mouseenter',function(){
+  $('.gnb-nav').on('mouseenter focusin',function(){
     if($devWidth < $limitSize) return false;
     $('.gnb-nav li ul').stop().fadeIn(500);
     $('header').addClass('on');
-  }).on('mouseleave',function(){
+  }).on('mouseleave focusout',function(){
     if($devWidth < $limitSize) return false;
     $('.gnb-nav li ul').stop().fadeOut(200);
     $('header').removeClass('on');
