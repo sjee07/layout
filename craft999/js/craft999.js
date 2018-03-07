@@ -93,9 +93,32 @@ function initMap(latVal, lngVal) {
     map: map
   });
 
+
+
+
   //마커를 클릭했을 때
   marker.addListener('click', function() {
     popupStore();
     //console.log('마커를 클릭함');
+  });
+
+  // 정보 더보기
+  var contentString = '<div id="content">'+
+  '<h2>BY ET TOL</h2>'+
+  '<ul>'+
+  '<li>서울특별시 중구 소공동 １</li>'+
+  '<li>Tel : 02.1234.1234</li>'+
+  '<li>Site : www.byettolotte.com</li>'+
+  '</ul>'+
+  '</div>';
+
+  var infowindow = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+  var marker = new google.maps.Marker({
+    position: uluru,
+    map: map,
+    title: 'CRAFT999'
   });
 }
