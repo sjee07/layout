@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRAFT 999</title>
+    <!-- css -->
+    <link rel="stylesheet" href="css/fontello-codes.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/craft999.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- script -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/craft999.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB18ZefbOWSZw-nmiRB1N9t0Oje6ZF-dZw&callback=initMap" async defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  </head>
+  <body>
+    <header>
+      <!-- 모바일 일 때에만 전시 -->
+      <!-- <button class="toggle-menu"><i class="icon icon-menu"></i><span class="skip">토글메뉴</span></button>
+      <button class="mobile-btn-search"><i class="icon icon-search"></i><span class="skip">검색</span></button> -->
+      <!-- 모바일 일 때에만 전시 end-->
+      <div class="center">
+        <!-- 로고 -->
+        <h1>CRAFT 999</h1>
+        <!-- 네비게이션 -->
+        <ul class="gnb-nav">
+          <li>
+            <a href="#">LOOKBOOK</a>
+            <ul>
+              <li><a href="#">2017 S/S</a></li>
+              <li><a href="#">2017 F/W</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">ACC</a>
+            <ul>
+              <li><a href="#">EARRING</a></li>
+              <li><a href="#">RING</a></li>
+              <li><a href="#">NECKLACE</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">STORE</a>
+            <ul>
+              <li><a href="#"></a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <!-- header end -->
+
+    <!-- 서브메뉴 -->
+    <section>
+      <article class="right-nav">
+        <nav>
+          <div class="wrap">
+            <!-- 통합검색 -->
+            <button id="btn-search-open"><i class="icon icon-search"></i><span class="skip">통합검색창열기</span></button>
+            <form action="#" class="search-form">
+              <input type="text" id="total-search" placeholder="내용을 입력해주세요.">
+              <button id="btn-search" class="icon icon-search"><span class="skip">통합검색</span></button>
+            </form>
+            <!-- 메뉴open창 -->
+            <button id="btn-menu-open" class="icon icon-angle-double-left"><span class="skip">토글메뉴</span></button>
+            <!-- 여기에 토글메뉴 내용 넣기 -->
+            <div class="sub-menu">
+              <div class="menu-wrap">
+                <form action="#" class="sub-search-form">
+                  <input type="text" id="total-search">
+                </form>
+                <form action="#" class="sub-member">
+                  <label for="id"><span class="skip">아이디</span></label>
+                  <input type="text" placeholder="아이디" id="id">
+                  <label for="password"><span class="skip">비밀번호</span></label>
+                  <input type="password" placeholder="비밀번호" id="password">
+                  <button id="btn-login" class="login">로그인</button>
+                  <button id="btn-sign" class="sign">회원가입</button>
+                </form>
+                <div class="find">
+                  <a href="#" class="f-id">아이디/비밀번호찾기</a>
+                </div>
+                <div class="icon-list">
+                  <ul>
+                    <li><a href="#"><i class="icon icon-basket"></i><span>CART</span></a></li>
+                    <li><a href="#"><i class="icon icon-attention-alt"></i><span>NOTICE</span></a></li>
+                    <li><a href="#"><i class="icon icon-help"></i><span>FAQ</span></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- sns창 -->
+            <button id="btn-insta-open" class="icon icon-instagram"><span class="skip">instagram</span></button>
+            <button id="btn-twt-open" class="icon icon-twitter"><span class="skip">twitter</span></button>
+          </div>
+        </nav>
+      </article>
+    </section>
+
+    <section>
+      <!-- main slide -->
+      <article class="swiper-container main">
+        <div class="swiper-wrapper main-slide">
+          <div class="swiper-slide"><img src="img/main1.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="img/main2.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="img/main1.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="img/main2.jpg" alt=""></div>
+        </div>
+      </article>
+
+
+      <!-- Gallery -->
+      <div class="gallery-btn">
+        <button><span>More</span></button>
+      </div>
+      <article class="gallery">
+        <div class="center">
+          <div class="gallery-wrap">
+            <div class="gallery-box1">
+              <img src="img/g1.jpg" alt="">
+            </div>
+            <div class="gallery-box2">
+              <div class="box2-1">
+                <img src="img/g2.jpg" alt="">
+              </div>
+              <div class="box2-2">
+                <img src="img/g3.jpg" alt="">
+              </div>
+            </div>
+            <div class="gallery-box3">
+              <div class="box3-1">
+                <img src="img/g4.jpg" alt="">
+              </div>
+              <div class="box3-2">
+                <img src="img/g5.jpg" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="info">
+        <div class="center">
+          <div class="wrap">
+            <div class="online">
+              <h1>ONLINE</h1>
+                <div class="online1">
+                  <p><span>W Concept Store</span><br>
+                  http://www.wconcept.co.kr<br>
+                  Tel : 1566-5027</p>
+                </div>
+                <div class="online2">
+                  <p><span>WizWid</span><br>
+                  http://www.wizwid.com<br>
+                  Tel : 1566-1130</p>
+                </div>
+                <div class="online3">
+                  <p><span>29cm</span><br>
+                  http://www.29cm.com<br>
+                  Tel : 1644-0560</p>
+                </div>
+                <div class="online4">
+                  <p><span>QUARTER#</span><br>
+                  http://quartershop.co.kr<br>
+                  Tel : 1661-4865</p>
+                </div>
+            </div>
+            <div class="offline">
+              <h1>OFFLINE</h1>
+              <div class="offline-wrap">
+                <div id="accordion">
+                  <ul>
+                    <li>
+                      <a href="#"><p>매장위치 확인</p><i class="icon icon-angle-double-down"></i></a>
+                      <div class="accordion list">
+                        <a href="#"><span>BY ET TOL(롯데백화점 월드타워점)</span></a>
+                        <a href="#"><span>BY ET TOL(롯데백화점 강남점)</span></a>
+                        <a href="#"><span>IT Hysan place</span></a>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="offline-map">
+                  <div id="map"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+  </section>
+
+  <footer>
+    <div class="center">
+      <div class="cs">
+        <p>
+          CUSTOMER CENTER<br>
+          010-1234-1234<br>
+          AM 10:00 ~ PM 4:00<br>
+          SAT.SUN.HOLIDAY OFF<br>
+          BANKING INFO : 국민 123456 01 123456 CRAFT 999
+        </p>
+      </div>
+      <div class="sitemap">
+        <ul>
+          <li><a href="#">ABOUT US |</a></li>
+          <li><a href="#">AGREEMENT |</a></li>
+          <li><a href="#">SHOP-GUIDE |</a></li>
+          <li><a href="#">CHECK PRIVACY |</a></li>
+        </ul>
+        <p>SHOP INFO<br>
+          COMPANY - CRAFT 999. CEO CPO - 김가희<br>
+          ADRESS - 서울 중구 퇴계로 118<br>
+          BUSINESS LICENSE : 000-14-00013<br>
+          ONLINE BUSINESS LICENSE : 2015-서울중구-0325<br>
+          COPYRIGHT (C) CRAFT 999</p>
+      </div>
+    </div>
+  </footer>
+  </body>
+</html>
