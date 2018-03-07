@@ -72,15 +72,53 @@ $('#btn-login').on('click',function(){
     $(this).find('i').toggleClass('icon-angle-double-down icon-angle-double-up');
   })
 
+// accordion e.preventDefault하는 방법
+//처음에 보여지고 있는 #accordion을 선택후, 보이지 않는(사실상 e.preventDefault해야하는)
+//'.accordion a'를 따로 선택후 e.preventDefault를 먹혀줘야 함.
+  $('#accordion').on('click', '.accordion a', function(e){
+    e.preventDefault();
+  })
+
 })
+
+//매장검색======================================
+// storeInfo=[{
+//   name:'BY ET TOL(롯데백화점 월드타워점)',
+//   addr:'서울 강남1',
+//   tel:'02-123-4567',
+//   lat:37.513378,
+//   lng:127.101529,
+// },{
+//   name:'BY ET TOL(롯데백화점 강남점)',
+//   addr:'서울 강남2',
+//   tel:'02-890-1234',
+//   lat:37.496919,
+//   lng:127.053259,
+// },{
+//   name:'IT Hysan place',
+//   addr:'서울 서대문구 1',
+//   tel:'02-567-8910',
+//   lat:37.528352,
+//   lng:127.040191,
+// }];
+
+selectIndex=0;
+$('.accordion a').on('click', function(){
+  $('.accordion a').removeClass('active');
+  $(this).addClass('active');
+  selectIndex=$(this).index();
+  initMap(storeInfo[selectIndex].lat, storeInfo[selectIndex].lng);
+})
+
+
 
 //구글 지도
 function initMap(latVal, lngVal) {
   //console.log('구글지도위치값:',latVal, lngVal);
   //위도경도의 값이 정의되지 않았을 때 기본값을 저장하도록 설정
   if(latVal==undefined && lngVal==undefined){
-    latVal=37.560770;
-    lngVal=126.984815;
+    latVal=37.513378;
+    lngVal=127.101529;
   }
 
   var uluru = {lat: latVal, lng: lngVal};
@@ -93,22 +131,12 @@ function initMap(latVal, lngVal) {
     map: map
   });
 
-
-
-
-  //마커를 클릭했을 때
-  marker.addListener('click', function() {
-    popupStore();
-    //console.log('마커를 클릭함');
-  });
-
   // 정보 더보기
   var contentString = '<div id="content">'+
-  '<h2>BY ET TOL</h2>'+
+  '<h4>BY ET TOL(롯데백화점 월드타워점)</h4>'+
   '<ul>'+
-  '<li>서울특별시 중구 소공동 １</li>'+
+  '<li>서울 강남</li>'+
   '<li>Tel : 02.1234.1234</li>'+
-  '<li>Site : www.byettolotte.com</li>'+
   '</ul>'+
   '</div>';
 
@@ -116,9 +144,9 @@ function initMap(latVal, lngVal) {
     content: contentString
   });
 
-  var marker = new google.maps.Marker({
-    position: uluru,
-    map: map,
-    title: 'CRAFT999'
+  //마커를 클릭했을 때
+  marker.addListener('click', function() {
+    infowindow.open(map, marker);
   });
+    //console.log('마커를 클릭함');
 }
