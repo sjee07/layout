@@ -96,6 +96,7 @@ header .gnb-nav li ul li a:hover{text-decoration: none;}
 .gallery-btn{width: 1178px; left: 50%; transform: translateX(26.5%); padding-top: 50px; margin-left: 160px;}
 .gallery-btn button{background: #ff7300; width: 120px; height: 50px;}
 .gallery-btn span{color: #fff; font-size: 14px;}
+.gallery-btn a{}
 .gallery .center{padding-left: 70px;}
 .gallery-wrap{position: relative; height: 500px; margin-bottom: 50px;}
 .gallery-box1, .gallery-box2{display: inline-block; position: absolute; top: 0;  overflow: hidden;}
