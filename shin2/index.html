@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>Shin Contractor</title>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/shin.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/shin.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDp6UmYcxmB8x5E42Gbd4_bqGTlLMS25lc&callback=initMap" async defer></script>
+  </head>
+  <body>
+    <section>
+      <article>
+        <header>
+          <nav>
+            <div class="logo">
+              <img src="img/logo.png" alt="">
+              <div class="logo-bar"></div>
+            </div>
+            <button id="btn-menu"><i class="fas fa-bars"></i><span class="skip">토글메뉴</span></button>
+            <ul class="home-ul">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li>
+                <a href="#">Projects</a>
+                <ul>
+                  <li><a href="project1.html">Apartment Tile</a></li>
+                  <li><a href="project2.html">Cafe Interior</a></li>
+                  <li><a href="project3.html">Bridge 123</a></li>
+                  <li><a href="project4.html">Construction</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Clients</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+          <div class="insta">
+            <a href="http://www.instagram.com"><i class="fab fa-instagram"></i></a>
+          </div>
+
+          <div class="swiper-container">
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+
+            <div class="swiper-wrapper">
+              <div class="swiper-slide main-slide1">
+                <!-- <img src="img/main1.jpg" alt=""> -->
+                <div class="slide1-txt">
+                  <div class="slide1-bar"></div>
+                  <h1 class="animated bounce">Shin Contractor</h1>
+                  <p class="animated bounce">We create new things</p>
+                </div>
+              </div>
+              <div class="swiper-slide main-slide2">
+                <div class="slide2-txt">
+                  <h1>Shin Contractor</h1>
+                  <div class="slide2-subtxt">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus vehicula massa, ac rhoncus risus facilisis at. Mauris eu tincidunt lectus.</p>
+                    <p>Donec sed dui et mauris vulputate malesuada vulputate ut purus. Sed a dapibus purus. Praesent consequat tortor at nibh dignissim, ut porta nibh lobortis.</p>
+                    <p>Duis aliquet semper sem. Nulla tempor enim sed eleifend scelerisque. Etiam ac massa vel sapien sagittis fringilla. Nulla facilisi. Quisque sodales gravida lorem at tincidunt.</p>
+                    <p>Nam condimentum interdum sapien, scelerisque blandit lorem consequat vitae. Integer ullamcorper magna vel aliquet congue. Ut quis tristique lectus.</p>
+                    <br>
+                    <p>Fusce est nunc, imperdiet nec lobortis eget, accumsan quis elit. Mauris cursus, lacus sit amet feugiat euismod, lectus odio finibus nisl, at dapibus tellus purus in felis.</p>
+                    <p>Integer et sem mi. Fusce scelerisque, nulla nec blandit semper, elit massa hendrerit urna, id hendrerit magna nulla id lorem. Sed posuere euismod lectus, in commodo tortor bibendum eu.</p>
+                    <p>Donec quis laoreet tortor. Phasellus dapibus iaculis pretium. Morbi eget lacus in ipsum placerat scelerisque.</p>
+                  </div>
+                  <div class="slide2-video">
+                    <a href="#"><i class="far fa-play-circle"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide main-slide3">
+                <!-- <img src="img/main3.jpg" alt=""> -->
+                <div class="slide3-txt">
+                  <h1>Project</h1>
+                  <p>What we have done</p>
+                </div>
+                <ul class="slide3-box">
+                  <a href="project1.html"><li class="slide3-pj1">
+                    <i class="fas fa-plus"></i>
+                    <span>Apartment Tile</span>
+                  </li></a>
+                  <a href="project2.html"><li class="slide3-pj2">
+                    <i class="fas fa-plus"></i>
+                    <span>Cafe interior</span>
+                  </li></a>
+                  <a href="project3.html"><li class="slide3-pj3">
+                    <i class="fas fa-plus"></i>
+                    <span>Bridge 123</span>
+                  </li></a>
+                  <a href="project4.html"><li class="slide3-pj4">
+                    <i class="fas fa-plus"></i>
+                    <span>Construction</span>
+                  </li></a>
+                </ul>
+              </div>
+              <div class="swiper-slide main-slide4">
+                <div class="slide4-txt">
+                  <h1>Clients</h1>
+                </div>
+                <div class="slide4-box">
+                  <div>
+                    <ul>
+                      <li><span class="slide4-title">Samsung</span></li>
+                      <li><img src="img/samsung.png" alt=""></li>
+                      <li><span class="slide4-addr">Lidcombe, NSW</span></li>
+                      <li><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span></li>
+                    </ul>
+                  </div>
+                  <div>
+                    <ul>
+                      <li><span class="slide4-title">Sydney Airport</span></li>
+                      <li><img src="img/airport.png" alt=""></li>
+                      <li><span class="slide4-addr">Sydney, NSW</span></li>
+                      <li><span>Lorem ipsum dolor sit amet.</span></li>
+                    </ul>
+                  </div>
+                  <div>
+                    <ul>
+                      <li><span class="slide4-title">Opera House</span></li>
+                      <li><img src="img/opera.png" alt=""></li>
+                      <li><span class="slide4-addr">Sydney City, NSW</span></li>
+                      <li>
+                        <p>Lorem ipsum dolor sit amet, <br> consectetur adipisicing elit.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <ul>
+                      <li><span class="slide4-title">Target</span></li>
+                      <li><img src="img/target.png" alt=""></li>
+                      <li><span class="slide4-addr">Burwood, NSW</span></li>
+                      <li><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide main-slide5">
+                <img src="img/main6.jpg" alt="">
+                  <div class="slide5-detail">
+                    <div class="contact-map">
+                      <div id="map"></div>
+                    </div>
+                    <div class="slide5-box">
+                      <h1>Contact</h1>
+                      <p class="detail-title">Office</p>
+                      <p class="detail-sub">Unit 51 / 7-9 Percy st Auburn 2144 NSW Australia</p>
+                      <p class="detail-title">Email</p>
+                      <p class="detail-sub"><a href="mailto:info@shinconstructor.com">info@shinconstructor.com</a></p>
+                      <p class="detail-title">Tel</p>
+                      <p class="detail-sub">123-456-7890</p>
+                      <p class="detail-title">Fax</p>
+                      <p class="detail-sub">123-456-7890</p>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </header>
+      </article>
+    </section>
+    <div class="popup-video">
+      <a href="#"><i class="far fa-times-circle"></i></a>
+      <iframe width="854" height="480" src="https://www.youtube.com/embed/UoEsXc3xUfs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <!-- <source id="mp4_src" src="source/shin.mp4" type="video/mp4">
+      <source id="ogg_src" src="source/shin.ogg" type="video/ogg"> -->
+    </div>
+  </body>
+</html>

@@ -1,0 +1,71 @@
+/* header */
+header{position: absolute; top: 0; width: 100%;}
+header nav{position: fixed; top: 0; left: 0; width: 100%; z-index: 2;}
+/* logo */
+nav .logo{text-align: left; padding-left: 3%; padding-top: 1%;}
+nav .logo .logo-bar{background: #fff; width: 4px; height: 46px; display: inline; position: absolute; left: 12%; top: 37%; transform: rotate(25deg);}
+/* menu */
+nav .home-ul{position: absolute; top: 43%; left: 12%;}
+nav .home-ul > li{float: left; padding: 0 15px; box-sizing: border-box;}
+nav .home-ul > li > a:focus, .home-ul > li > a:hover{font-weight: bold;}
+nav .home-ul li a{color: #fff; font-size: 20px; width: 104px; text-align: center;}
+.home-ul > li > a{display: block;}
+.home-ul li ul{display: none;}
+.home-ul ul li{padding-top: 5px;}
+.home-ul ul li a{font-size: 12px; padding: 0 10px;}
+.home-ul ul li a:focus, .home-ul ul li a:hover{background: #ff5722;}
+/* swiper 메인 */
+.swiper-container{height: 100vh;}
+/* 좌우버튼 */
+.swiper-button-next, .swiper-container-rtl .swiper-button-prev{background-image: none; font-size: 50px; color: #fff; right: 123px; left: auto;}
+.swiper-button-next.swiper-button-disabled{background-image: none; font-size: 50px; color: #fff; right: 123px; left: auto;}
+.swiper-button-prev.swiper-button-disabled{background-image: none; font-size: 50px; color: #fff; left: 123px; right: auto;}
+.swiper-button-prev, .swiper-container-rtl .swiper-button-next{background-image: none; font-size: 50px; color: #fff; left: 123px; right: auto;}
+/* 페이지네이션 */
+.swiper-container-horizontal>.swiper-pagination-progressbar {width: 100%; height: 20px; left: 0; top: initial; bottom: 0;}
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill{background: #ff5722;}
+/* Apt tile 1 */
+.swiper-slide{background-repeat: no-repeat; background-size: cover; background-position: center;}
+.pr1{background-image: url('../img/p3-1.jpg');}
+.pr1-txt, .pr2-txt, .pr3-txt, .pr4-txt, .pr5-txt{margin: 700px 0 0 130px; width: 550px; color: #fff;}
+.pr1-txt h1, .pr2-txt h1, .pr3-txt h1, .pr4-txt h1, .pr5-txt h1{padding-bottom: 10px; font-size: 2em;}
+.pr1 .pr1-txt p{}
+.pr2{background-image: url('../img/p3-2.jpg');}
+.pr3{background-image: url('../img/p3-3.jpg');}
+.pr4{background-image: url('../img/p3-4.jpg');}
+.pr5{background-image: url('../img/p3-5.jpg');}
+/* 미디어쿼리 ================================================================================================*/
+/* 태블릿 ====================================================================================================*/
+@media (min-width: 768px) and (max-width:1119px) {
+  /* logo */
+  nav .logo{padding-left: 40px; padding-top: 10px;}
+  nav .logo .logo-bar{left: 157px; top: 42px;}
+  /* menu */
+  nav .home-ul{top: 50px; left: 146px;}
+  nav .home-ul > li{padding: 0 15px;}
+  nav .home-ul li a{width: 93px; font-size: 17px;}
+  .home-ul ul li a{padding: 0 5px; font-size: 12px;}
+  /* project 이미지 */
+  .pr1-txt, .pr2-txt, .pr3-txt, .pr4-txt, .pr5-txt{margin: 0; padding: 97% 0 0 14%; width: 550px; color: #fff;}
+  .pr1-txt h1, .pr2-txt h1, .pr3-txt h1, .pr4-txt h1, .pr5-txt h1{padding-bottom: 0; font-size: 4em;}
+  .pr1-txt p, .pr2-txt p, .pr3-txt p, .pr4-txt p, .pr5-txt p{font-size: 20px;}
+
+}
+/* 미디어쿼리 ================================================================================================*/
+/* 모바일 ====================================================================================================*/
+/* logo */
+@media (max-width:767px) {
+  nav .logo{padding-left: 0; padding-top: 0; text-align: center;}
+  nav .logo .logo-bar{display: none;}
+  /* menu */
+  nav .home-ul{display: none; top: 50px; left: 146px;}
+  nav .home-ul > li{padding: 0 15px;}
+  nav .home-ul li a{width: 93px; font-size: 17px;}
+  .home-ul ul li a{padding: 0 5px; font-size: 12px;}
+  /* 좌우버튼 */
+  .swiper-button-next, .swiper-container-rtl .swiper-button-prev{display: none;}
+  .swiper-button-prev, .swiper-container-rtl .swiper-button-next{display: none;}
+  /* 프로젝트 텍스트 */
+  .pr1-txt, .pr2-txt, .pr3-txt, .pr4-txt, .pr5-txt{width: 300px; color: #fff; margin: 116% 0 0 9%;}
+  .pr1-txt h1, .pr2-txt h1, .pr3-txt h1, .pr4-txt h1, .pr5-txt h1{font-size: 1.5em;}
+}
